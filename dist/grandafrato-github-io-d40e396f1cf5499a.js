@@ -430,7 +430,7 @@ function initSync(module) {
 
 async function init(input) {
     if (typeof input === 'undefined') {
-        input = new URL('grandafrato-github-io-6d0b6d3c42c2f85d_bg.wasm', import.meta.url);
+        input = new URL('grandafrato-github-io-d40e396f1cf5499a_bg.wasm', import.meta.url);
     }
     const imports = getImports();
 
