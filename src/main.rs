@@ -7,7 +7,7 @@ fn main() {
     sycamore::render(|cx| {
         view! { cx,
             NavBar
-            p { "The website of grandafrato." }
+            p { "A website." }
         }
     })
 }
