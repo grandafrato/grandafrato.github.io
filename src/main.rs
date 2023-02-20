@@ -1,13 +1,18 @@
 mod components;
+mod pages;
 
-use components::nav_bar::NavBar;
+use pages::Page;
 use sycamore::view;
+
+#[global_allocator]
+static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 fn main() {
     sycamore::render(|cx| {
         view! { cx,
-            NavBar
-            p { "A website." }
+            Page {
+                p { "Hello" }
+            }
         }
     })
 }
