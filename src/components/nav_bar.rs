@@ -60,7 +60,7 @@ fn NavItem<'a, G: Html>(cx: Scope<'a>, props: NavItemProps<'a, G>) -> View<G> {
     let children = props.children.call(cx);
     view! { cx,
         li {
-            a(class="md:p-4 py-2 block hover:text-purple-400", href=props.href) {
+            a(class="md:p-4 px-5 py-2 text-centered block hover:text-purple-400", href=props.href) {
                 (children)
             }
         }
@@ -77,8 +77,8 @@ fn ToggleButton<'a, G: Html>(cx: Scope<'a>, props: ToggleButtonProps<'a>) -> Vie
     let toggle_visibililty = |_| props.visible.set(!*props.visible.get());
 
     view! { cx,
-        button(on:click=toggle_visibililty, class="md:hidden") {
-            HamburgerIcon(class="h-6 w-6 cursor-pointer block mx-2")
+        button(on:click=toggle_visibililty, class="md:hidden mx-1") {
+            HamburgerIcon(class="h-6 w-6 cursor-pointer block mx-1")
         }
     }
 }

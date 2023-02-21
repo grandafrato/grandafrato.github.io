@@ -1,5 +1,7 @@
+pub mod index;
+
 use sycamore::view;
-use sycamore::{component, prelude::Children, reactive::Scope, view::View, web::Html, Prop};
+use sycamore::{component, component::Children, reactive::Scope, view::View, web::Html, Prop};
 
 use crate::components::nav_bar::NavBar;
 
@@ -28,8 +30,10 @@ struct PageContentsProp<'a, G: Html> {
 fn PageContents<'a, G: Html>(cx: Scope<'a>, props: PageContentsProp<'a, G>) -> View<G> {
     let children = props.children.call(cx);
     view! { cx,
-        div(class="flex bg-white mx-auto max-w-3xl rounded-lg my-16 mb-auto p-16") {
-            (children)
+        div(class="px-6") {
+            div(class="bg-white mx-auto max-w-screen-lg rounded-lg my-16 p-16") {
+                (children)
+            }
         }
     }
 }

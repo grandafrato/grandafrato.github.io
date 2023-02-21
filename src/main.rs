@@ -1,6 +1,7 @@
 mod components;
 mod pages;
 
+use pages::index::Index;
 use pages::Page;
 use sycamore::view;
 
@@ -11,7 +12,7 @@ fn main() {
     sycamore::render(|cx| {
         view! { cx,
             Page {
-                p { "Hello" }
+                Index()
             }
         }
     })
